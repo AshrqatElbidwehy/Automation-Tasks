@@ -14,7 +14,9 @@ public class DocumentPage {
     public String getPriceItem(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOfElementLocated(priceLocator));
+
         String price = driver.findElement(priceLocator).getText();
+
         return price;
     }
 }
